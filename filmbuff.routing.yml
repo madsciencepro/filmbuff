@@ -1,0 +1,15 @@
+filmbuff.api_config_page:
+  path: '/admin/config/filmbuff/movie-api'
+  defaults:
+    _form: 'Drupal\filmbuff\Form\MovieAPI'
+    _title: 'Movie API - Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+filmbuff.listing:
+  path: '/filmbuff-listing'
+  defaults:
+    _controller: 'Drupal\filmbuff\Controller\MovieListing::view'
+    _title: 'Movie Listings'
+  requirements:
+    _permission: 'access content'

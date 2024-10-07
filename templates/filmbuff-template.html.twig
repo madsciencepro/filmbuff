@@ -1,0 +1,19 @@
+{# [module]/templates/filmbuff-template.html.twig #}
+<div class="search">
+  {# This will be replaced by an actual search form later #}
+  <form action="" method="get">
+    <input type="text" name="search" placeholder="Search movies">
+    <button type="submit">{{ 'Search'|t }}</button>
+  </form>
+</div>
+
+<div class="content">
+  {# Placeholder for dynamic movie listings #}
+  <div class="movie-listings">
+    {{ content.movies | default('Movie listings go here') }}
+  </div>
+</div>
+
+<div class="pagination">
+  {# Placeholder for pagination #}
+</div>

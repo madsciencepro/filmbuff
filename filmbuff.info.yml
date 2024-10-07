@@ -1,0 +1,6 @@
+name: Filmbuff
+description: A module that lets users search for movies and add them to a watchlist
+package: Custom
+
+type: module
+core_version_requirement: ^10 || ^11

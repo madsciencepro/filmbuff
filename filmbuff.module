@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function filmbuff_theme($existing, $type, $theme, $path) {
+  return [
+    'filmbuff_template' => [
+      'variables' => ['content' => NULL],
+    ],
+  ];
+}

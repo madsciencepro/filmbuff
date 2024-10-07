@@ -1,0 +1,9 @@
+services:
+  logger.channel.filmbuff:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['filmbuff']
+
+  filmbuff.movie_api_connector:
+    class: Drupal\filmbuff\MovieAPIConnector
+    arguments: ['@http_client_factory', '@config.factory', '@logger.channel.filmbuff']
