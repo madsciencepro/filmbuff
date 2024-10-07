@@ -9,9 +9,17 @@
 
 <div class="content">
   {# Placeholder for dynamic movie listings #}
-  <div class="movie-listings">
-    {{ content.movies | default('Movie listings go here') }}
-  </div>
+{#  <div class="movie-listings">#}
+{#    {{ content.movies | default('Movie listings go here') }}#}
+{#  </div>#}
+  <ul>
+    {% for movie in movies %}
+      <li>{{ movie.title }} ({{ movie.release_date }})</li>
+    {% else %}
+      <li>No movies found.</li>
+    {% endfor %}
+  </ul>
+  
 </div>
 
 <div class="pagination">
